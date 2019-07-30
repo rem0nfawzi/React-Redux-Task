@@ -1,10 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
 import tick from '../../assets/images/tick.svg';
 import { connect } from 'react-redux';
 import { updateStatus } from '../../store/actions/users';
 
 const User = ({ user, updateStatus, showAll, updateSelected }) => {
-  const [checked, setChecked] = useState(false);
   const handleCheck = e => {
     e.target.classList.toggle('checked');
     if (e.target.classList.contains('checked')) {
