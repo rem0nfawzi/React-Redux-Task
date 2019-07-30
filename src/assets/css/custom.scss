@@ -1,0 +1,279 @@
+// Declaring colors
+$borderColor: #E2E2E2;
+$checkBg: #D8D8D8;
+$textBoldColor: #39628D;
+$typeColor: #354069;
+$hoverBg: rgba(57, 98, 141, 0.05);
+$checked: #39628D;
+
+// Declaring mixins
+@mixin transition($time) {
+    transition: all $time ease-in-out;
+    -webkit-transition: all $time ease-in-out;
+    -o-transition: all $time ease-in-out;
+    -moz-transition: all $time ease-in-out;
+    -ms-transition: all $time ease-in-out;
+}
+
+@mixin vAlign {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+}
+
+/** GLOBAL STYLING **/
+body {
+    margin: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+
+// Text
+p,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-family: Montserrat;
+}
+
+h1,
+h2 {
+    // font-family: Exo_Black;
+    text-transform: capitalize;
+}
+
+
+/** USERS SECTiON STYLING **/
+#users {
+    padding-top: 150px;
+    padding-bottom: 150px;
+    padding-left: 100px;
+    padding-right: 100px;
+
+    .top-title {
+        .selected {
+            float: right;
+            font-size: 12px;
+            text-transform: lowercase;
+            color: #808080;
+            line-height: 20px;
+        }
+
+        .mark {
+            float: right;
+            margin-left: 30px;
+            width: 20px;
+        }
+    }
+
+    .title-wrap {
+        overflow: hidden;
+
+        .users-icon {
+            width: 40px;
+            height: 40px;
+            background-image: url('../images/users.png');
+            background-size: 100%;
+            background-position: center;
+            margin-right: 15px;
+            float: left;
+        }
+
+        h2 {
+            line-height: 40px;
+            float: left;
+            text-transform: capitalize;
+            font-weight: 500;
+            font-size: 18px;
+        }
+    }
+
+    .row {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        border-bottom: 2px solid $borderColor;
+
+        &.other-row {
+            @include transition(.2s);
+            cursor: pointer;
+
+            &:hover {
+                background-color: $hoverBg;
+            }
+        }
+
+        &:hover .part.other.second .text {
+            font-weight: 700;
+        }
+
+        .part {
+            &.first {
+                label {
+                    float: left;
+                    width: 16px;
+                    height: 16px;
+                    line-height: 16px;
+                    background-color: $checkBg;
+                    cursor: pointer;
+                    margin-right: 20px;
+                    text-align: center;
+
+                    @include transition(.2s);
+
+                    img {
+                        opacity: 0;
+                        width: 10px;
+                        @include transition(.2s);
+                        pointer-events: none;
+                    }
+
+                    &.checked {
+                        background-color: #39628D;
+
+                        img {
+                            opacity: 1;
+                        }
+                    }
+                }
+
+                input {
+                    width: 0;
+                    height: 0;
+                    margin: 0;
+                }
+
+
+            }
+
+            &.main {
+                .text {
+                    float: left;
+                    line-height: 16px;
+                    color: $textBoldColor;
+                    text-transform: uppercase;
+                    font-weight: bold;
+                    font-size: 12px;
+                }
+            }
+
+            &.main.fifth .text {
+                float: none;
+                text-align: right
+            }
+
+            &.fifth {
+                text-align: right;
+            }
+
+
+
+            &.other {
+
+                &.second,
+                &.third,
+                &.fourth {
+                    height: 100%;
+                    position: relative;
+
+                    .text {
+                        @include vAlign();
+                    }
+                }
+
+                &.second {
+                    .text {
+                        text-transform: capitalize;
+                        @include transition(.2s);
+                    }
+                }
+
+                .text {
+                    color: $textBoldColor;
+                    font-size: 14px;
+                }
+
+                &.first {
+                    label {
+                        margin-top: 4px;
+                    }
+
+                    .text {
+                        float: left;
+                        height: 24px;
+                        width: 34px;
+                        line-height: 24px;
+                        text-align: center;
+                        color: $typeColor;
+                        border-radius: 1px;
+                        font-weight: bold;
+                        font-size: 12px;
+                        text-transform: uppercase;
+
+                        &.co,
+                        &.gu {
+                            background-color: #8A98CA;
+                        }
+
+                        &.cr {
+                            background-color: #F2AC57;
+                        }
+
+                        &.su {
+                            background-color: #CACACA;
+                        }
+
+                        &.em {
+                            background-color: #E17878;
+                        }
+                    }
+                }
+
+                &.fifth {
+
+                    .check-wrap {
+                        display: inline-block;
+                        width: 24px;
+                        height: 14px;
+                        background-color: $checkBg;
+                        border-radius: 50px;
+                        position: relative;
+                        @include transition(.3s);
+
+                        .circle {
+                            @include vAlign();
+                            right: 1.5px;
+                            width: 11px;
+                            height: 11px;
+                            background-color: #fff;
+                            border-radius: 50%;
+                            pointer-events: none;
+                            @include transition(.3s);
+                        }
+
+                        &.active {
+                            background-color: #99D9D9;
+
+                            .circle {
+                                right: auto;
+                                left: 1.5px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

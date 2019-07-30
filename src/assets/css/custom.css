@@ -1,0 +1,227 @@
+/** GLOBAL STYLING **/
+/* line 29, custom.scss */
+body {
+  margin: 0; }
+
+/* line 33, custom.scss */
+* {
+  box-sizing: border-box; }
+
+/* line 39, custom.scss */
+p,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-family: Montserrat; }
+
+/* line 52, custom.scss */
+h1,
+h2 {
+  text-transform: capitalize; }
+
+/** USERS SECTiON STYLING **/
+/* line 60, custom.scss */
+#users {
+  padding-top: 150px;
+  padding-bottom: 150px;
+  padding-left: 100px;
+  padding-right: 100px; }
+  /* line 67, custom.scss */
+  #users .top-title .selected {
+    float: right;
+    font-size: 12px;
+    text-transform: lowercase;
+    color: #808080;
+    line-height: 20px; }
+  /* line 75, custom.scss */
+  #users .top-title .mark {
+    float: right;
+    margin-left: 30px;
+    width: 20px; }
+  /* line 82, custom.scss */
+  #users .title-wrap {
+    overflow: hidden; }
+    /* line 85, custom.scss */
+    #users .title-wrap .users-icon {
+      width: 40px;
+      height: 40px;
+      background-image: url("../images/users.png");
+      background-size: 100%;
+      background-position: center;
+      margin-right: 15px;
+      float: left; }
+    /* line 95, custom.scss */
+    #users .title-wrap h2 {
+      line-height: 40px;
+      float: left;
+      text-transform: capitalize;
+      font-weight: 500;
+      font-size: 18px; }
+  /* line 104, custom.scss */
+  #users .row {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #E2E2E2; }
+    /* line 109, custom.scss */
+    #users .row.other-row {
+      transition: all 0.2s ease-in-out;
+      -webkit-transition: all 0.2s ease-in-out;
+      -o-transition: all 0.2s ease-in-out;
+      -moz-transition: all 0.2s ease-in-out;
+      -ms-transition: all 0.2s ease-in-out;
+      cursor: pointer; }
+      /* line 113, custom.scss */
+      #users .row.other-row:hover {
+        background-color: rgba(57, 98, 141, 0.05); }
+    /* line 118, custom.scss */
+    #users .row:hover .part.other.second .text {
+      font-weight: 700; }
+    /* line 124, custom.scss */
+    #users .row .part.first label {
+      float: left;
+      width: 16px;
+      height: 16px;
+      line-height: 16px;
+      background-color: #D8D8D8;
+      cursor: pointer;
+      margin-right: 20px;
+      text-align: center;
+      transition: all 0.2s ease-in-out;
+      -webkit-transition: all 0.2s ease-in-out;
+      -o-transition: all 0.2s ease-in-out;
+      -moz-transition: all 0.2s ease-in-out;
+      -ms-transition: all 0.2s ease-in-out; }
+      /* line 136, custom.scss */
+      #users .row .part.first label img {
+        opacity: 0;
+        width: 10px;
+        transition: all 0.2s ease-in-out;
+        -webkit-transition: all 0.2s ease-in-out;
+        -o-transition: all 0.2s ease-in-out;
+        -moz-transition: all 0.2s ease-in-out;
+        -ms-transition: all 0.2s ease-in-out;
+        pointer-events: none; }
+      /* line 143, custom.scss */
+      #users .row .part.first label.checked {
+        background-color: #39628D; }
+        /* line 146, custom.scss */
+        #users .row .part.first label.checked img {
+          opacity: 1; }
+    /* line 152, custom.scss */
+    #users .row .part.first input {
+      width: 0;
+      height: 0;
+      margin: 0; }
+    /* line 162, custom.scss */
+    #users .row .part.main .text {
+      float: left;
+      line-height: 16px;
+      color: #39628D;
+      text-transform: uppercase;
+      font-weight: bold;
+      font-size: 12px; }
+    /* line 172, custom.scss */
+    #users .row .part.main.fifth .text {
+      float: none;
+      text-align: right; }
+    /* line 177, custom.scss */
+    #users .row .part.fifth {
+      text-align: right; }
+    /* line 185, custom.scss */
+    #users .row .part.other.second, #users .row .part.other.third, #users .row .part.other.fourth {
+      height: 100%;
+      position: relative; }
+      /* line 191, custom.scss */
+      #users .row .part.other.second .text, #users .row .part.other.third .text, #users .row .part.other.fourth .text {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        -webkit-transform: translateY(-50%);
+        -o-transform: translateY(-50%);
+        -moz-transform: translateY(-50%);
+        -ms-transform: translateY(-50%); }
+    /* line 197, custom.scss */
+    #users .row .part.other.second .text {
+      text-transform: capitalize;
+      transition: all 0.2s ease-in-out;
+      -webkit-transition: all 0.2s ease-in-out;
+      -o-transition: all 0.2s ease-in-out;
+      -moz-transition: all 0.2s ease-in-out;
+      -ms-transition: all 0.2s ease-in-out; }
+    /* line 203, custom.scss */
+    #users .row .part.other .text {
+      color: #39628D;
+      font-size: 14px; }
+    /* line 209, custom.scss */
+    #users .row .part.other.first label {
+      margin-top: 4px; }
+    /* line 213, custom.scss */
+    #users .row .part.other.first .text {
+      float: left;
+      height: 24px;
+      width: 34px;
+      line-height: 24px;
+      text-align: center;
+      color: #354069;
+      border-radius: 1px;
+      font-weight: bold;
+      font-size: 12px;
+      text-transform: uppercase; }
+      /* line 225, custom.scss */
+      #users .row .part.other.first .text.co, #users .row .part.other.first .text.gu {
+        background-color: #8A98CA; }
+      /* line 230, custom.scss */
+      #users .row .part.other.first .text.cr {
+        background-color: #F2AC57; }
+      /* line 234, custom.scss */
+      #users .row .part.other.first .text.su {
+        background-color: #CACACA; }
+      /* line 238, custom.scss */
+      #users .row .part.other.first .text.em {
+        background-color: #E17878; }
+    /* line 246, custom.scss */
+    #users .row .part.other.fifth .check-wrap {
+      display: inline-block;
+      width: 24px;
+      height: 14px;
+      background-color: #D8D8D8;
+      border-radius: 50px;
+      position: relative;
+      transition: all 0.3s ease-in-out;
+      -webkit-transition: all 0.3s ease-in-out;
+      -o-transition: all 0.3s ease-in-out;
+      -moz-transition: all 0.3s ease-in-out;
+      -ms-transition: all 0.3s ease-in-out; }
+      /* line 255, custom.scss */
+      #users .row .part.other.fifth .check-wrap .circle {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        -webkit-transform: translateY(-50%);
+        -o-transform: translateY(-50%);
+        -moz-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        right: 1.5px;
+        width: 11px;
+        height: 11px;
+        background-color: #fff;
+        border-radius: 50%;
+        pointer-events: none;
+        transition: all 0.3s ease-in-out;
+        -webkit-transition: all 0.3s ease-in-out;
+        -o-transition: all 0.3s ease-in-out;
+        -moz-transition: all 0.3s ease-in-out;
+        -ms-transition: all 0.3s ease-in-out; }
+      /* line 266, custom.scss */
+      #users .row .part.other.fifth .check-wrap.active {
+        background-color: #99D9D9; }
+        /* line 269, custom.scss */
+        #users .row .part.other.fifth .check-wrap.active .circle {
+          right: auto;
+          left: 1.5px; }
